@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:listview/screens/screens.dart';
 
 class HomeScreen extends StatelessWidget {
    
