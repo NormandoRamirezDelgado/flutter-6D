@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:listview/router/app_routes.dart';
 
-import 'screens/listview2_screen.dart';
+import 'screens/screens.dart';
+
 
 
 void main() => runApp(const MyApp());
@@ -13,7 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: ListView2Screen()
+      //home: AlertScreen(),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      onGenerateRoute: AppRoutes.onGenerateRoute
+
+
     );
   }
 }
