@@ -12,6 +12,17 @@ class AppTheme {
     //AppBar Theme
     appBarTheme: AppBarTheme(
       color: Colors.red[500],
+    ),
+
+    //Tema de Botón Flotante
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+            backgroundColor: primary
+      ),
     )
   );
 

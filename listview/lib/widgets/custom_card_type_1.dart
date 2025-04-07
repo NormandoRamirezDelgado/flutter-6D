@@ -9,6 +9,7 @@ class CustomCardType1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: const Color.fromARGB(255, 165, 186, 158),
       child: Column(
         children: [
           ListTile(
