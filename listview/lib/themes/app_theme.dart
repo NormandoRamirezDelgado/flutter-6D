@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   
-  static const Color primary = Color.fromARGB(255, 136, 111, 245);
+  static const Color primary = Color.fromARGB(255, 15, 109, 34);
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     //Color Primario
@@ -22,6 +22,33 @@ class AppTheme {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
             backgroundColor: primary
+      ),
+    ),
+
+    inputDecorationTheme: InputDecorationTheme(
+      floatingLabelStyle: TextStyle( color: primary),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        )
+      ),
+
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        )
+      ),
+
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        )
       ),
     )
   );
