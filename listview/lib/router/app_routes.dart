@@ -16,6 +16,7 @@ class AppRoutes {
     MenuOption(route: 'animated', icon: Icons.play_circle_fill_outlined, name: 'Avatar Screen', widget: AnimatedScreen()),
     MenuOption(route: 'inputs', icon: Icons.input_rounded, name: 'Text Inputs', widget: InputsScreen()),
     MenuOption(route: 'slider', icon: Icons.social_distance_outlined, name: 'Sliders & Checks', widget: SliderScreen()),
+    MenuOption(route: 'listviewbuilder', icon: Icons.build_circle_outlined, name: 'ListViewBuilder', widget: ListViewBuilderScreen()),
 
   ];
 
