@@ -18,7 +18,7 @@ class InputsScreen extends StatelessWidget {
       'last_name'   : 'Ramírez',
       'email'       : 'nramirezd@cbtis236.edu.mx',
       'password'    : '12345678',
-      'role'        : 'Admin'
+      'role'        : 'Administrador'
     };
 
     return Scaffold(
@@ -44,6 +44,20 @@ class InputsScreen extends StatelessWidget {
             
                 CustomInputField(labelText: 'Contraseña', hintText: 'Contraseña del Usuario', obscureText: true, formProperty: 'password', formValues: formValues,),
                 SizedBox(height: 20,),
+
+                DropdownButtonFormField(
+                  hint: Text('Role'),
+                  items: [
+                    DropdownMenuItem(value: 'Administrador', child: Text('Administrador')),
+                    DropdownMenuItem(value: 'SuperUser', child: Text('Super Usuario')),
+                    DropdownMenuItem(value: 'Developer', child: Text('Developer')),
+                    DropdownMenuItem(value: 'Jr. Developer', child: Text('Jr. Developer')),
+                  ], 
+                  onChanged: (value) {
+                    formValues['role'] = value ?? 'Administrador';
+                  },
+                ),
+                SizedBox(height: 20,),
             
                 ElevatedButton(
                   onPressed: (){
@@ -60,7 +74,8 @@ class InputsScreen extends StatelessWidget {
                   }, 
                   child: SizedBox(
                     width: double.infinity,
-                    child: Center(child: Text('Guardar', style: TextStyle(color: Colors.white, fontSize: 25 ))))
+                    child: Center(child: Text('Guardar', style: TextStyle(color: Colors.white, fontSize: 25 )))
+                  ),
                 )
               ],
             ),

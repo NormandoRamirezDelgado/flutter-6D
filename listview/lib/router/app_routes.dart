@@ -15,6 +15,7 @@ class AppRoutes {
     MenuOption(route: 'avatar', icon: Icons.supervised_user_circle_rounded, name: 'Avatar Screen', widget: AvatarScreen()),
     MenuOption(route: 'animated', icon: Icons.play_circle_fill_outlined, name: 'Avatar Screen', widget: AnimatedScreen()),
     MenuOption(route: 'inputs', icon: Icons.input_rounded, name: 'Text Inputs', widget: InputsScreen()),
+    MenuOption(route: 'slider', icon: Icons.social_distance_outlined, name: 'Sliders & Checks', widget: SliderScreen()),
 
   ];
 
