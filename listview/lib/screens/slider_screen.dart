@@ -55,7 +55,7 @@ class _SliderScreenState extends State<SliderScreen> {
           Switch.adaptive(
             activeColor: AppTheme.primary,
             value: _sliderEnabled, 
-            onChanged: (value) => setState(() {_sliderEnabled = value ?? true; }),
+            onChanged: (value) => setState(() {_sliderEnabled = value; }),
           ),
 
           SwitchListTile.adaptive(

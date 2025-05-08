@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listview/router/app_routes.dart';
 import 'package:listview/themes/app_theme.dart';
+import 'package:listview/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -10,8 +11,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final menuOptions = AppRoutes.menuOptions;
+    final scaffolKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
+      key: scaffolKey,
       appBar: AppBar(
         //backgroundColor: Colors.blue[600],
         title: Text('Componentes de Flutter'),
@@ -26,7 +29,8 @@ class HomeScreen extends StatelessWidget {
         ), 
         separatorBuilder: (context, index) => Divider(), 
         itemCount: menuOptions.length
-      )
+      ),
+      drawer: SideMenu(scaffoldKey: scaffolKey,),
     );
   }
 }
